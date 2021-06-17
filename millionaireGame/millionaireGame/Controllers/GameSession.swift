@@ -8,13 +8,15 @@
 import Foundation
 
 class GameSession {
-    private var totalQuestions: Int
-    private var correctAnswers: Int = 0
+    var totalQuestions: Int
+    var correctAnswers = Observable<Int>(0)
     private var isStoppedByGamer = false
-    private var rewards = [64000, 125000, 250000, 500000, 1000000]
+    private let maxReward: Float = 1000000
+    private var rewardPerQuestion: Int = 0
     private var reward: Int {
-        if isStoppedByGamer && correctAnswers > 0 || totalQuestions == correctAnswers {
-            return rewards[correctAnswers-1]
+        
+        if isStoppedByGamer && correctAnswers.value > 0 || totalQuestions == correctAnswers.value {
+            return totalQuestions == correctAnswers.value ? Int(maxReward) : correctAnswers.value*rewardPerQuestion
         } else {
             return 0
         }
@@ -22,21 +24,22 @@ class GameSession {
     
     init(totalQuestions: Int) {
         self.totalQuestions = totalQuestions
+        self.rewardPerQuestion = Int(maxReward / Float(totalQuestions))
     }
     
     func calcReward() -> Int {
-        return correctAnswers > 0 ? rewards[correctAnswers-1] : 0
+        return correctAnswers.value > 0 ? correctAnswers.value*rewardPerQuestion : 0
     }
 }
 
 
 extension GameSession: GameDataDelegate {
     func increaseCorrectAnswer() {
-        self.correctAnswers += 1
+        self.correctAnswers.value += 1
     }
     
     func getReward() -> Int {
-        return self.rewards[correctAnswers-1]
+        return correctAnswers.value*rewardPerQuestion
     }
     
     func stopByUser() {
@@ -45,7 +48,7 @@ extension GameSession: GameDataDelegate {
     
     func saveResult() {
         DispatchQueue.global().async {
-            let newResult = GameResult(date: Date(), correctAnswers: self.correctAnswers, reward: self.reward)
+            let newResult = GameResult(date: Date(), correctAnswers: self.correctAnswers.value, reward: self.reward)
             let resultsCaretaker = ResultsCaretaker()
             var results = resultsCaretaker.load() ?? []
             results.append(newResult)

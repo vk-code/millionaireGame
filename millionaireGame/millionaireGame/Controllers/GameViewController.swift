@@ -9,6 +9,7 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+    @IBOutlet weak var cerrectAnswersLabel: UILabel!
     @IBOutlet weak var helpByCallBtn: UIButton!
     @IBOutlet weak var helpBySpectatorsBtn: UIButton!
     @IBOutlet weak var helpBy50Btn: UIButton!
@@ -23,14 +24,23 @@ class GameViewController: UIViewController {
     private var answerButtons: [UIButton] = []
     private var currentQuestionIndex: Int = 0
     private var correctAnswer: String = ""
+    var difficultyStrategy: DifficultyStrategyProtocol?
     var questions: [Question] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        difficultyStrategy?.questionsOrder(questions: &questions)
         answerButtons = [answerBtnA, answerBtnB, answerBtnC, answerBtnD]
         buttonsConf()
         setScene()
+        
+        Game.shared.session?.correctAnswers.addObserver(self, options: [.new, .initial], closure: { [weak self] (count, _) in
+            guard let self = self else { return }
+            self.cerrectAnswersLabel.text = "Правильных ответов: \(count) из \(Game.shared.session!.totalQuestions)"
+        })
+
     }
     
     

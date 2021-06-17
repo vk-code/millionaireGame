@@ -10,7 +10,10 @@ import Foundation
 class Game {
     
     public static var shared = Game()
+    
     var session: GameSession?
+    var difficulty: Difficulty = .easy
+    
     var numberFormatter: NumberFormatter = {
         let nf = NumberFormatter()
         nf.locale = Locale(identifier: "ru_RU")

@@ -13,6 +13,13 @@
 		CEA0236E267630A700E63E2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA0236C267630A700E63E2D /* Main.storyboard */; };
 		CEA02370267630A800E63E2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA0236F267630A800E63E2D /* Assets.xcassets */; };
 		CEA02373267630A800E63E2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA02371267630A800E63E2D /* LaunchScreen.storyboard */; };
+		CEC02DC4267A32FB004E6186 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC02DC3267A32FB004E6186 /* SettingsViewController.swift */; };
+		CEC02DC7267A34E0004E6186 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC02DC6267A34E0004E6186 /* Difficulty.swift */; };
+		CEC02DCA267A369D004E6186 /* DifficultyStrategyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC02DC9267A369D004E6186 /* DifficultyStrategyProtocol.swift */; };
+		CEC02DCC267A3797004E6186 /* EasyDifficultyStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC02DCB267A3797004E6186 /* EasyDifficultyStrategy.swift */; };
+		CEC02DCE267A37A0004E6186 /* HardDifficultyStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC02DCD267A37A0004E6186 /* HardDifficultyStrategy.swift */; };
+		CEC02DD1267A4279004E6186 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC02DD0267A4279004E6186 /* Observable.swift */; };
+		CEC02DD3267A4E69004E6186 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC02DD2267A4E69004E6186 /* QuestionsViewController.swift */; };
 		CED359542676332400F066E3 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED359532676332400F066E3 /* Question.swift */; };
 		CED35956267639E800F066E3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED35955267639E800F066E3 /* GameViewController.swift */; };
 		CED3595826763A3F00F066E3 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3595726763A3F00F066E3 /* ResultsViewController.swift */; };
@@ -23,6 +30,10 @@
 		CED359662676A34200F066E3 /* GameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED359652676A34200F066E3 /* GameResult.swift */; };
 		CED3596A2676AE4200F066E3 /* GameResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED359682676AE4200F066E3 /* GameResultTableViewCell.swift */; };
 		CED3596B2676AE4200F066E3 /* GameResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED359692676AE4200F066E3 /* GameResultTableViewCell.xib */; };
+		CEEF7ECE267B688F002D27C8 /* QuestionsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEF7ECD267B688F002D27C8 /* QuestionsBuilder.swift */; };
+		CEEF7ED1267B7426002D27C8 /* QuestionsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEF7ED0267B7426002D27C8 /* QuestionsCaretaker.swift */; };
+		CEEF7ED5267B74C1002D27C8 /* NewQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEF7ED3267B74C1002D27C8 /* NewQuestionTableViewCell.swift */; };
+		CEEF7ED6267B74C1002D27C8 /* NewQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEF7ED4267B74C1002D27C8 /* NewQuestionTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +45,13 @@
 		CEA0236F267630A800E63E2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEA02372267630A800E63E2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEA02374267630A800E63E2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEC02DC3267A32FB004E6186 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CEC02DC6267A34E0004E6186 /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
+		CEC02DC9267A369D004E6186 /* DifficultyStrategyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyStrategyProtocol.swift; sourceTree = "<group>"; };
+		CEC02DCB267A3797004E6186 /* EasyDifficultyStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyDifficultyStrategy.swift; sourceTree = "<group>"; };
+		CEC02DCD267A37A0004E6186 /* HardDifficultyStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardDifficultyStrategy.swift; sourceTree = "<group>"; };
+		CEC02DD0267A4279004E6186 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		CEC02DD2267A4E69004E6186 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		CED359532676332400F066E3 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		CED35955267639E800F066E3 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		CED3595726763A3F00F066E3 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +62,10 @@
 		CED359652676A34200F066E3 /* GameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResult.swift; sourceTree = "<group>"; };
 		CED359682676AE4200F066E3 /* GameResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultTableViewCell.swift; sourceTree = "<group>"; };
 		CED359692676AE4200F066E3 /* GameResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameResultTableViewCell.xib; sourceTree = "<group>"; };
+		CEEF7ECD267B688F002D27C8 /* QuestionsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsBuilder.swift; sourceTree = "<group>"; };
+		CEEF7ED0267B7426002D27C8 /* QuestionsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsCaretaker.swift; sourceTree = "<group>"; };
+		CEEF7ED3267B74C1002D27C8 /* NewQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuestionTableViewCell.swift; sourceTree = "<group>"; };
+		CEEF7ED4267B74C1002D27C8 /* NewQuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewQuestionTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +98,10 @@
 		CEA02365267630A700E63E2D /* millionaireGame */ = {
 			isa = PBXGroup;
 			children = (
+				CEEF7ECC267B687E002D27C8 /* Builder */,
+				CEC02DCF267A4261004E6186 /* Observable */,
+				CEC02DC8267A360A004E6186 /* Strategy */,
+				CEC02DC5267A34D6004E6186 /* Objects */,
 				CED359622676A21D00F066E3 /* Memento */,
 				CED3595F26764A7100F066E3 /* Protocols */,
 				CED3595A2676450900F066E3 /* Singleton */,
@@ -91,6 +117,32 @@
 			path = millionaireGame;
 			sourceTree = "<group>";
 		};
+		CEC02DC5267A34D6004E6186 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				CEC02DC6267A34E0004E6186 /* Difficulty.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		CEC02DC8267A360A004E6186 /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+				CEC02DC9267A369D004E6186 /* DifficultyStrategyProtocol.swift */,
+				CEC02DCB267A3797004E6186 /* EasyDifficultyStrategy.swift */,
+				CEC02DCD267A37A0004E6186 /* HardDifficultyStrategy.swift */,
+			);
+			path = Strategy;
+			sourceTree = "<group>";
+		};
+		CEC02DCF267A4261004E6186 /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				CEC02DD0267A4279004E6186 /* Observable.swift */,
+			);
+			path = Observable;
+			sourceTree = "<group>";
+		};
 		CED359522676331900F066E3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,11 +155,14 @@
 		CED3595926763A5900F066E3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CEEF7ED2267B7495002D27C8 /* NewQuestionsView */,
 				CED359672676AE1B00F066E3 /* ResultsView */,
 				CEA0236A267630A700E63E2D /* MenuViewController.swift */,
 				CED35955267639E800F066E3 /* GameViewController.swift */,
 				CED3595726763A3F00F066E3 /* ResultsViewController.swift */,
 				CED3595D2676457700F066E3 /* GameSession.swift */,
+				CEC02DC3267A32FB004E6186 /* SettingsViewController.swift */,
+				CEC02DD2267A4E69004E6186 /* QuestionsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -132,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				CED359632676A23600F066E3 /* ResultsCaretaker.swift */,
+				CEEF7ED0267B7426002D27C8 /* QuestionsCaretaker.swift */,
 			);
 			path = Memento;
 			sourceTree = "<group>";
@@ -143,6 +199,23 @@
 				CED359692676AE4200F066E3 /* GameResultTableViewCell.xib */,
 			);
 			path = ResultsView;
+			sourceTree = "<group>";
+		};
+		CEEF7ECC267B687E002D27C8 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				CEEF7ECD267B688F002D27C8 /* QuestionsBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		CEEF7ED2267B7495002D27C8 /* NewQuestionsView */ = {
+			isa = PBXGroup;
+			children = (
+				CEEF7ED3267B74C1002D27C8 /* NewQuestionTableViewCell.swift */,
+				CEEF7ED4267B74C1002D27C8 /* NewQuestionTableViewCell.xib */,
+			);
+			path = NewQuestionsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEEF7ED6267B74C1002D27C8 /* NewQuestionTableViewCell.xib in Resources */,
 				CED3596B2676AE4200F066E3 /* GameResultTableViewCell.xib in Resources */,
 				CEA02373267630A800E63E2D /* LaunchScreen.storyboard in Resources */,
 				CEA02370267630A800E63E2D /* Assets.xcassets in Resources */,
@@ -218,16 +292,26 @@
 			files = (
 				CED35956267639E800F066E3 /* GameViewController.swift in Sources */,
 				CEA0236B267630A700E63E2D /* MenuViewController.swift in Sources */,
+				CEEF7ED1267B7426002D27C8 /* QuestionsCaretaker.swift in Sources */,
+				CEC02DCA267A369D004E6186 /* DifficultyStrategyProtocol.swift in Sources */,
+				CEEF7ECE267B688F002D27C8 /* QuestionsBuilder.swift in Sources */,
+				CEC02DC7267A34E0004E6186 /* Difficulty.swift in Sources */,
+				CEEF7ED5267B74C1002D27C8 /* NewQuestionTableViewCell.swift in Sources */,
+				CEC02DD1267A4279004E6186 /* Observable.swift in Sources */,
+				CEC02DCE267A37A0004E6186 /* HardDifficultyStrategy.swift in Sources */,
 				CED3595E2676457700F066E3 /* GameSession.swift in Sources */,
 				CED359642676A23600F066E3 /* ResultsCaretaker.swift in Sources */,
+				CEC02DD3267A4E69004E6186 /* QuestionsViewController.swift in Sources */,
 				CED3596126764A7A00F066E3 /* GameDataDelegate.swift in Sources */,
 				CED3595C2676451D00F066E3 /* Game.swift in Sources */,
 				CED359542676332400F066E3 /* Question.swift in Sources */,
 				CEA02367267630A700E63E2D /* AppDelegate.swift in Sources */,
 				CED3596A2676AE4200F066E3 /* GameResultTableViewCell.swift in Sources */,
 				CEA02369267630A700E63E2D /* SceneDelegate.swift in Sources */,
+				CEC02DC4267A32FB004E6186 /* SettingsViewController.swift in Sources */,
 				CED3595826763A3F00F066E3 /* ResultsViewController.swift in Sources */,
 				CED359662676A34200F066E3 /* GameResult.swift in Sources */,
+				CEC02DCC267A3797004E6186 /* EasyDifficultyStrategy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

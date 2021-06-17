@@ -24,6 +24,13 @@ class MenuViewController: UIViewController {
                 let questions = generateQuestions()
                 let session = GameSession(totalQuestions: questions.count)
                 
+                switch Game.shared.difficulty {
+                case .hard:
+                    vc.difficultyStrategy = HardDifficultyStrategy()
+                default:
+                    vc.difficultyStrategy = EasyDifficultyStrategy()
+                }
+                
                 vc.questions = questions
                 vc.gameDataDelegate = session
                 Game.shared.session = session
@@ -37,7 +44,7 @@ class MenuViewController: UIViewController {
     
     
     private func generateQuestions() -> [Question] {
-        return [
+        var questions = [
             Question(question: "Назовите столицу Кении",
                      answers: ["Найроби", "Малинди", "Момбаса", "Кисуму"],
                      correctAnswerIndex: 0
@@ -59,6 +66,13 @@ class MenuViewController: UIViewController {
                      correctAnswerIndex: 1
             ),
         ]
+        
+        let questionsCaretaker = QuestionsCaretaker()
+        
+        if let userQuestions = questionsCaretaker.load() {
+            userQuestions.map { questions.append($0) }
+        }
+        return questions
     }
 }
 
